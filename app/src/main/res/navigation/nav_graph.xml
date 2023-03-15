@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentRegLog2">
+    <fragment
+        android:id="@+id/fragmentRegLog2"
+        android:name="com.example.scudle_sapar.activitys.FragmentRegLog"
+        android:label="fragment_reg_log"
+        tools:layout="@layout/fragment_reg_log" >
+        <action
+            android:id="@+id/homeToHello"
+            app:destination="@id/HelloFragment" />
+        <action
+            android:id="@+id/HometoRegister"
+            app:destination="@id/FragmentReg" />
+        <action
+            android:id="@+id/homeToAdminPage"
+            app:destination="@id/adminPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCalander"
+        android:name="com.example.scudle_sapar.activitys.fragmentCalander"
+        android:label="fragment_calander"
+        tools:layout="@layout/fragment_calander" >
+        <action
+            android:id="@+id/calendarToTimePicker"
+            app:destination="@id/timePickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentReg"
+        android:name="com.example.scudle_sapar.activitys.FragmentReg"
+        android:label="fragment_reg"
+        tools:layout="@layout/fragment_reg" >
+        <action
+            android:id="@+id/registerToHello"
+            app:destination="@id/HelloFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/HelloFragment"
+        android:name="com.example.scudle_sapar.activitys.HelloFragment"
+        android:label="fragment_hello"
+        tools:layout="@layout/fragment_hello">
+        <action
+            android:id="@+id/hello_to_calendar"
+            app:destination="@id/fragmentCalander" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/hello_exit_to_wellcome"
+            app:destination="@id/fragmentRegLog2" />
+    </fragment>
+    <fragment
+        android:id="@+id/timePickerFragment"
+        android:name="com.example.scudle_sapar.activitys.TimePickerFragment"
+        android:label="fragment_time_picker"
+        tools:layout="@layout/fragment_time_picker" >
+        <action
+            android:id="@+id/timeBackToHello"
+            app:destination="@id/HelloFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminPageFragment"
+        android:name="com.example.scudle_sapar.activitys.AdminPageFragment"
+        android:label="fragment_admin_page"
+        tools:layout="@layout/fragment_admin_page" >
+        <action
+            android:id="@+id/adminToMyCustomers"
+            app:destination="@id/myCustomersFragment" />
+        <action
+            android:id="@+id/adminToCalaendar"
+            app:destination="@id/calendarAdminFragment" />
+        <action
+            android:id="@+id/adminLogOutHome"
+            app:destination="@id/fragmentRegLog2" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCustomersFragment"
+        android:name="com.example.scudle_sapar.activitys.MyCustomersFragment"
+        android:label="fragment_my_customers"
+        tools:layout="@layout/fragment_my_customers" >
+        <action
+            android:id="@+id/myCustomersBackToAdmin"
+            app:destination="@id/adminPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarAdminFragment"
+        android:name="com.example.scudle_sapar.activitys.CalendarAdminFragment"
+        android:label="fragment_calendar_admin"
+        tools:layout="@layout/fragment_calendar_admin" >
+        <action
+            android:id="@+id/calendarAdmin_to_schedule"
+            app:destination="@id/scheduleFragmentAdmin" />
+        <action
+            android:id="@+id/calendarBackToAdmin"
+            app:destination="@id/adminPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleFragmentAdmin"
+        android:name="com.example.scudle_sapar.activitys.ScheduleFragmentAdmin"
+        android:label="fragment_schedule_admin"
+        tools:layout="@layout/fragment_schedule_admin" >
+        <action
+            android:id="@+id/schedule_back_home"
+            app:destination="@id/adminPageFragment" />
+        <action
+            android:id="@+id/action_scheduleFragmentAdmin_to_calendarAdminFragment"
+            app:destination="@id/calendarAdminFragment" />
+    </fragment>
+
+</navigation>

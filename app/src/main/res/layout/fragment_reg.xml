@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_dark_blue"
+    tools:context=".activitys.FragmentReg" >
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/myapplogo" />
+
+    <EditText
+        android:id="@+id/Email_RegPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_frame"
+        android:textAlignment="center"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Email"
+        android:textSize="24dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/Pass_RegPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_frame"
+        android:textAlignment="center"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="numberPassword"
+        android:hint="Password"
+        android:textSize="24dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/FullName_RegPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_frame"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Full name"
+        android:textSize="24dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/Phone_RegPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/white_frame"
+        android:ems="10"
+        android:inputType="phone"
+        android:textAlignment="center"
+        android:hint="Phone number"
+        android:textSize="24dp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/buttonReg_RegPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_design_ornge"
+        android:textColor="#392306"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:text="Register" />
+
+</LinearLayout>
